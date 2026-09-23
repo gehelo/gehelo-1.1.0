@@ -1,0 +1,27 @@
+import platform
+improt os
+
+def check_laptop_hardware():
+    print("=" * 40)
+    print("       LAPTOP HARDWARE INFORMATION       ")
+
+    # Get Operating System info
+    os_name = platform.system()
+    os_vertion = platform.release()
+    print(f"💻 OS: {os_name} {os_vertion}")
+
+    # Get CPU info
+    cpu_processor = platform.processor()
+    if not cpu_processor:
+        cpu_processor = "Running on Cloud Server"
+    print(f"🧠 CPU: {cpu_processor}")
+
+    # Cloud server warning for GitHub Codespaces
+    print("-" * 40)
+    print("💡 Notice: Since you are running this code")
+    print("   on GitHub codespaces, the hardwre specs")
+    print("   above belong to GitHub's cloud server,")
+    print("   not your physical HP Chromebook hardware.")
+    print("=" * 40)
+# Run the system check
+check_laptop_hardware()
